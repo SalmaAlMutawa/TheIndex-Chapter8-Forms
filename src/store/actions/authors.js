@@ -33,8 +33,6 @@ export const postAuthor = newAuthor => {
       .then(author =>
         dispatch({ type: actionTypes.POST_AUTHOR, payload: author })
       )
-      .catch(err =>
-        dispatch({ type: actionTypes.POST_AUTHOR, payload: err.response.data })
-      );
+      .catch(err => console.log(err));
   };
 };
